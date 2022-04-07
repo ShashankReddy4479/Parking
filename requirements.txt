@@ -1,5 +1,5 @@
 streamlit
 Keras
-numpy
 opencv-python-headless
+numpy
 tensorflow
