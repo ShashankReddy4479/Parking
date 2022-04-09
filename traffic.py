@@ -37,9 +37,9 @@ if submit:
         st.image(images)
         
         predicted_class= predict(images)
-            if result is 'Less Traffic':
+        if result is 'Less Traffic':
                 st.success('Traffic is less')
-            elif result is 'Moderate Traffic':
+        elif result is 'Moderate Traffic':
                 st.info('Traffic is Moderate')
-            else:
+        else:
                 st.warning('Traffic is heavy')
