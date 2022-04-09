@@ -12,7 +12,7 @@ def predict(img):
 
     predictions = model.predict(img_array)
 
-    result = class_names[np.argmax(predictions)]
+    result = class_names[np.argmax(predictions[0])]
 
     if result is 'Less Traffic':
         st.success('Traffic is less')
