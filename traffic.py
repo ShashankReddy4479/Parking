@@ -5,7 +5,7 @@ from keras.preprocessing import image
 from keras.models import load_model
 import streamlit as st
 class_names=['Heavy Traffic','Less Traffic', 'Moderate Traffic']
-model = load_model('model_lenet.h5')
+model = load_model('model.h5')
 def predict(img):
     img_array = tf.keras.preprocessing.image.img_to_array(img)
     img_array = tf.expand_dims(img_array, 0)
