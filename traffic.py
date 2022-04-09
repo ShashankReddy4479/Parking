@@ -13,13 +13,13 @@ def predict(img):
     predictions = model.predict(img_array)
 
     result = class_names[np.argmax(predictions[0])]
-    st.write(result)
+    #st.write(result)
     if result is class_names[0]:
         st.warning("Traffic is Heavy")
     elif result is class_names[1]:
-        st.warning("Traffic is Less/Nearly Empty")
+        st.success("Traffic is Less/Nearly Empty")
     elif result is class_names[2]:
-        st.warning("Traffic is Moderate")
+        st.info("Traffic is Moderate")
 #Setting Title of App
 image = Image.open('index.jpg')
 st.image(image,use_column_width=True)
