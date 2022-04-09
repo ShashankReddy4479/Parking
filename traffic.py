@@ -18,7 +18,7 @@ def predict(img):
         st.warning("Traffic is Heavy")
     elif result is class_names[1]:
         st.warning("Traffic is Less/Nearly Empty")
-    else result is class_names[2]:
+    elif result is class_names[2]:
         st.warning("Traffic is Moderate")
 #Setting Title of App
 image = Image.open('index.jpg')
