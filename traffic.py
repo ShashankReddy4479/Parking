@@ -14,7 +14,7 @@ def predict(img):
 
     result = class_names[np.argmax(predictions[0])]
     st.write(result)
-    if result is 'Heavy Traffic':
+    if result is class_names[0]:
         st.warning("Traffic is Heavy")
 #Setting Title of App
 image = Image.open('index.jpg')
