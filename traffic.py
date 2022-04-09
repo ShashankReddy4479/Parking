@@ -14,7 +14,8 @@ def predict(img):
 
     result = class_names[np.argmax(predictions[0])]
     st.write(result)
-
+    if result is 'Heavy Traffic':
+        st.warning("Traffic is Heavy")
 #Setting Title of App
 image = Image.open('index.jpg')
 st.image(image,use_column_width=True)
@@ -37,9 +38,4 @@ if submit:
         st.image(images)
         
         predicted_class= predict(images)
-        if result is 'Less Traffic':
-                st.success('Traffic is less')
-        elif result is 'Moderate Traffic':
-                st.info('Traffic is Moderate')
-        else:
-                st.warning('Traffic is heavy')
+
