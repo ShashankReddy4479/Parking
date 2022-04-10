@@ -13,7 +13,7 @@ def predict(img):
     predictions = model.predict(img_array)
 
     result = class_names[np.argmax(predictions[0])]
-    st.write(result)
+    #st.write(result)
     if result is class_names[0]:
         st.warning("Traffic is Heavy")
     elif result is class_names[1]:
