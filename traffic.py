@@ -14,6 +14,14 @@ def predict(img):
 
     result = class_names[np.argmax(predictions[0])]
     #st.write(result)
+    YY=np.array(predictions, dtype=np.float32)
+    st.title('Probabilities')
+    st.write('Heavy')
+    st.write(YY[0][0])
+    st.write('Less')
+    st.write(YY[0][1])
+    st.write('Moderate')
+    st.write(YY[0][2])
     if result is class_names[0]:
         st.warning("Traffic is Heavy")
     elif result is class_names[1]:
