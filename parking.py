@@ -18,7 +18,7 @@ def predict(img):
         st.success('Parking is less')
     elif result is 'Moderate Parking':
         st.info('Parking is Moderate')
-    elif:
+    elif result is 'Heavy Parking':
         st.warning('Parking is heavy')
 #Setting Title of App
 image = Image.open('index.jpg')
