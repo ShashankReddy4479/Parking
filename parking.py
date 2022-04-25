@@ -13,7 +13,7 @@ def predict(img):
     predictions = model.predict(img_array)
 
     result = class_names[np.argmax(predictions)]
-
+    st.write(result)
     if result is 'Less Parking':
         st.success('Parking is less')
     elif result is 'Moderate Parking':
