@@ -23,7 +23,7 @@ def predict(img):
 #Setting Title of App
 image = Image.open('index.jpg')
 st.image(image,use_column_width=True)
-st.title("Parking Traffic Detection")
+st.title("Parking lot Classification")
 st.markdown("Upload images of Parking Spot location")
 
 file = st.file_uploader("Choose an image...", type=['png', 'jpg' , 'jpeg'])
