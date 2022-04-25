@@ -9,7 +9,7 @@ model = load_model('model.h5')
 def predict(img):
     img_array = tf.keras.preprocessing.image.img_to_array(img)
     img_array = tf.expand_dims(img_array, 0)
-
+ 
     predictions = model.predict(img_array)
 
     result = class_names[np.argmax(predictions)]
