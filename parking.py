@@ -4,7 +4,7 @@ import tensorflow as tf
 from keras.preprocessing import image
 from keras.models import load_model
 import streamlit as st
-class_names=['Less Parking','Heavy Parking', 'Moderate Parking' ]
+class_names=[1,2,3]
 model = load_model('model.h5')
 def predict(img):
     img_array = tf.keras.preprocessing.image.img_to_array(img)
@@ -14,11 +14,11 @@ def predict(img):
 
     result = class_names[np.argmax(predictions)]
     st.write(result)
-    if result is 'Less Parking':
+    if result is 1:
         st.success('Parking is less')
-    elif result is 'Moderate Parking':
+    elif result is 3:
         st.info('Parking is Moderate')
-    elif result is 'Heavy Parking':
+    elif result is 2:
         st.warning('Parking is heavy')
 #Setting Title of App
 image = Image.open('index.jpg')
